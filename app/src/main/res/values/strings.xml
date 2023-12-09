@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Aplikasi Manajemen Gudang</string>
+    <string name="title_activity_create_data_barang">CreateDataBarang</string>
+    <string name="title_activity_read_data_barang">ReadDataBarang</string>
+    <string name="title_activity_update_data_barang">UpdateDataBarang</string>
+    <string name="title_activity_delete_data_barang">DeleteDataBarang</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="idbarang">ID Barang : %s</string>
+    <string name="namabarang">Nama Barang : %s</string>
+    <string name="kategori">Kategori : %s</string>
+    <string name="jumlah">Jumlah : %s</string>
+    <string name="lokasi">Lokasi : %s</string>
+    <string name="tanggalmasuk">Tanggal Masuk : %s</string>
+    <string name="hargabarang">Harga Barang : %s</string>
+    <string name="status">Status : %s</string>
+    <string name="catatan">Catatan : %s</string>
+</resources>
