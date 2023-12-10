@@ -182,12 +182,7 @@ fun MainActivityPage(){
                                         horizontalAlignment = Alignment.Start,
                                         modifier = Modifier.fillMaxSize()
                                     ){
-                                       /* Icon(
-                                            painter = painterResource(id = R.drawable.add_symbol),
-                                            contentDescription = "Add Icon",
-                                            modifier = Modifier
-                                                .size(30.dp, 30.dp)
-                                        )*/
+                                       // if you want add icon, place here
                                     }
                                 }
                             }
@@ -225,12 +220,7 @@ fun MainActivityPage(){
                                         horizontalAlignment = Alignment.Start,
                                         modifier = Modifier.fillMaxSize()
                                     ){
-                                        /*Icon(
-                                            painter = painterResource(id = R.drawable.read_symbol),
-                                            contentDescription = "Read Icon",
-                                            modifier = Modifier
-                                                .size(30.dp, 30.dp)
-                                        )*/
+                                        // if you want place icon,place here
                                     }
                                 }
                             }
@@ -273,12 +263,7 @@ fun MainActivityPage(){
                                         horizontalAlignment = Alignment.Start,
                                         modifier = Modifier.fillMaxSize()
                                     ){
-                                        /*Icon(
-                                            painter = painterResource(id = R.drawable.edit_symbol),
-                                            contentDescription = "Update Icon",
-                                            modifier = Modifier
-                                                .size(30.dp, 30.dp)
-                                        )*/
+                                        // if you want place icon, place in here
                                     }
                                 }
                             }
@@ -316,12 +301,7 @@ fun MainActivityPage(){
                                         horizontalAlignment = Alignment.Start,
                                         modifier = Modifier.fillMaxSize()
                                     ){
-                                        /*Icon(
-                                            painter = painterResource(id = R.drawable.delete_symbol),
-                                            contentDescription = "Delete Icon",
-                                            modifier = Modifier
-                                                .size(30.dp, 30.dp)
-                                        )*/
+                                       // if you want place icon, place here
                                     }
                                 }
                             }

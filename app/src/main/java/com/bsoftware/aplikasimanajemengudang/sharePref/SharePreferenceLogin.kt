@@ -27,7 +27,7 @@ class SharePreferenceLogin(activity : Activity) {
     }
 
     fun getUsername() : String{
-        return sharePrefLogin.getString(USERNAMEKEY,"")!!
+        return sharePrefLogin.getString(USERNAMEKEY,"Hello")!!
     }
 
     companion object{

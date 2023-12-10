@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -64,7 +65,7 @@ fun CreatePage(databarangviewmodel: DataBarangViewModel = DataBarangViewModel())
     var lokasi by remember { mutableStateOf("") }
     var tanggalmasuk by remember { mutableStateOf("") }
     var hargabarang by remember { mutableStateOf("") }
-    val status by remember { mutableStateOf("") }
+    var status by remember { mutableStateOf("") }
     var catatan by remember { mutableStateOf("") }
 
     val context : Context = LocalContext.current
@@ -91,176 +92,180 @@ fun CreatePage(databarangviewmodel: DataBarangViewModel = DataBarangViewModel())
             )
         }
 
-        Column(
-            modifier = Modifier.padding(top = 30.dp)
-        ) {
-            OutlinedTextField(
-                value = idbarang,
-                onValueChange = {idbarang = it},
-                label = {
-                    Text(
-                        text = "Masukkan Id Barang",
-                        style = TextStyle(
-                            fontWeight = FontWeight.Bold
-                        )
-                    )
-                },
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(10.dp),
+        LazyColumn{
+            item {
+                Column(
+                    modifier = Modifier.padding(top = 30.dp)
+                ) {
+                    OutlinedTextField(
+                        value = idbarang,
+                        onValueChange = {idbarang = it},
+                        label = {
+                            Text(
+                                text = "Masukkan Id Barang",
+                                style = TextStyle(
+                                    fontWeight = FontWeight.Bold
+                                )
+                            )
+                        },
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(10.dp),
 
-                )
-            OutlinedTextField(
-                value = namabarang,
-                onValueChange = {namabarang = it},
-                label = {
-                    Text(
-                        text = "Masukkan Nama Barang",
-                        style = TextStyle(
-                            fontWeight = FontWeight.Bold
                         )
-                    )
-                },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 10.dp),
-                shape = RoundedCornerShape(10.dp),
+                    OutlinedTextField(
+                        value = namabarang,
+                        onValueChange = {namabarang = it},
+                        label = {
+                            Text(
+                                text = "Masukkan Nama Barang",
+                                style = TextStyle(
+                                    fontWeight = FontWeight.Bold
+                                )
+                            )
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 10.dp),
+                        shape = RoundedCornerShape(10.dp),
 
-                )
-            OutlinedTextField(
-                value = kategori,
-                onValueChange = {kategori = it},
-                label = {
-                    Text(
-                        text = "Masukkan Kategori Barang (/Box)",
-                        style = TextStyle(
-                            fontWeight = FontWeight.Bold
                         )
+                    OutlinedTextField(
+                        value = kategori,
+                        onValueChange = {kategori = it},
+                        label = {
+                            Text(
+                                text = "Masukkan Kategori Barang",
+                                style = TextStyle(
+                                    fontWeight = FontWeight.Bold
+                                )
+                            )
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 10.dp),
+                        shape = RoundedCornerShape(10.dp)
                     )
-                },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 10.dp),
-                shape = RoundedCornerShape(10.dp)
-            )
-            OutlinedTextField(
-                value = jumlah,
-                onValueChange = {jumlah = it},
-                label = {
-                    Text(
-                        text = "Masukkan Jumlah Barang",
-                        style = TextStyle(
-                            fontWeight = FontWeight.Bold
-                        )
+                    OutlinedTextField(
+                        value = jumlah,
+                        onValueChange = {jumlah = it},
+                        label = {
+                            Text(
+                                text = "Masukkan Jumlah Barang (/Box)",
+                                style = TextStyle(
+                                    fontWeight = FontWeight.Bold
+                                )
+                            )
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 10.dp),
+                        shape = RoundedCornerShape(10.dp)
                     )
-                },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 10.dp),
-                shape = RoundedCornerShape(10.dp)
-            )
-            OutlinedTextField(
-                value = lokasi,
-                onValueChange = {lokasi = it},
-                label = {
-                    Text(
-                        text = "Masukkan Lokasi Barang",
-                        style = TextStyle(
-                            fontWeight = FontWeight.Bold
-                        )
+                    OutlinedTextField(
+                        value = lokasi,
+                        onValueChange = {lokasi = it},
+                        label = {
+                            Text(
+                                text = "Masukkan Lokasi Barang",
+                                style = TextStyle(
+                                    fontWeight = FontWeight.Bold
+                                )
+                            )
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 10.dp),
+                        shape = RoundedCornerShape(10.dp)
                     )
-                },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 10.dp),
-                shape = RoundedCornerShape(10.dp)
-            )
-            OutlinedTextField(
-                value = tanggalmasuk,
-                onValueChange = {tanggalmasuk = it},
-                label = {
-                    Text(
-                        text = "Masukkan Tanggal Masuk",
-                        style = TextStyle(
-                            fontWeight = FontWeight.Bold
-                        )
+                    OutlinedTextField(
+                        value = tanggalmasuk,
+                        onValueChange = {tanggalmasuk = it},
+                        label = {
+                            Text(
+                                text = "Masukkan Tanggal Masuk",
+                                style = TextStyle(
+                                    fontWeight = FontWeight.Bold
+                                )
+                            )
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 10.dp),
+                        shape = RoundedCornerShape(10.dp)
                     )
-                },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 10.dp),
-                shape = RoundedCornerShape(10.dp)
-            )
-            OutlinedTextField(
-                value = hargabarang,
-                onValueChange = {hargabarang = it},
-                label = {
-                    Text(
-                        text = "Masukkan Harga Barang Satuan",
-                        style = TextStyle(
-                            fontWeight = FontWeight.Bold
-                        )
+                    OutlinedTextField(
+                        value = hargabarang,
+                        onValueChange = {hargabarang = it},
+                        label = {
+                            Text(
+                                text = "Masukkan Harga Barang Satuan",
+                                style = TextStyle(
+                                    fontWeight = FontWeight.Bold
+                                )
+                            )
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 10.dp),
+                        shape = RoundedCornerShape(10.dp)
                     )
-                },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 10.dp),
-                shape = RoundedCornerShape(10.dp)
-            )
-            OutlinedTextField(
-                value = status,
-                onValueChange = {hargabarang = it},
-                label = {
-                    Text(
-                        text = "Masukkan Status Stok Barang",
-                        style = TextStyle(
-                            fontWeight = FontWeight.Bold
-                        )
+                    OutlinedTextField(
+                        value = status,
+                        onValueChange = {status = it},
+                        label = {
+                            Text(
+                                text = "Masukkan Status Stok Barang",
+                                style = TextStyle(
+                                    fontWeight = FontWeight.Bold
+                                )
+                            )
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 10.dp),
+                        shape = RoundedCornerShape(10.dp)
                     )
-                },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 10.dp),
-                shape = RoundedCornerShape(10.dp)
-            )
-            OutlinedTextField(
-                value = catatan,
-                onValueChange = {catatan = it},
-                label = {
-                    Text(
-                        text = "Masukkan Catatan (Jika Ada)",
-                        style = TextStyle(
-                            fontWeight = FontWeight.Bold
-                        )
+                    OutlinedTextField(
+                        value = catatan,
+                        onValueChange = {catatan = it},
+                        label = {
+                            Text(
+                                text = "Masukkan Catatan (Jika Ada)",
+                                style = TextStyle(
+                                    fontWeight = FontWeight.Bold
+                                )
+                            )
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 10.dp),
+                        shape = RoundedCornerShape(10.dp)
                     )
-                },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 10.dp),
-                shape = RoundedCornerShape(10.dp)
-            )
-            Button(
-                onClick = {
-                    databarangviewmodel.createDataBarang(
-                        idbarang = idbarang,
-                        namabarang = namabarang,
-                        kategori = kategori,
-                        jumlah = jumlah.toInt(),
-                        lokasi = lokasi,
-                        tanggalmasuk = tanggalmasuk,
-                        hargabarang = hargabarang,
-                        status = status,
-                        catatan = catatan
-                    )
-                    // intent back into mainActivity
-                    Toast.makeText(context,"Data Barang Berhasil Ditambahkan", Toast.LENGTH_SHORT).show()
-                    context.startActivity(Intent(context,MainActivity::class.java))
-                    activity?.finish()
-                },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 10.dp)
-            ) {
-                Text(text = "Tambah Data")
+                    Button(
+                        onClick = {
+                            databarangviewmodel.createDataBarang(
+                                idbarang = idbarang,
+                                namabarang = namabarang,
+                                kategori = kategori,
+                                jumlah = jumlah.toInt(),
+                                lokasi = lokasi,
+                                tanggalmasuk = tanggalmasuk,
+                                hargabarang = hargabarang,
+                                status = status,
+                                catatan = catatan
+                            )
+                            // intent back into mainActivity
+                            Toast.makeText(context,"Data Barang Berhasil Ditambahkan", Toast.LENGTH_SHORT).show()
+                            context.startActivity(Intent(context,MainActivity::class.java))
+                            activity?.finish()
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 10.dp)
+                    ) {
+                        Text(text = "Tambah Data")
+                    }
+                }
             }
         }
     }
